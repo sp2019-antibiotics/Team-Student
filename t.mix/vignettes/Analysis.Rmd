@@ -11,7 +11,6 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 output:
-  pdf_document: default
   rmarkdown::html_vignette: default
 ---
 
@@ -38,7 +37,7 @@ library(t.mix)
 ## Data
 
 ```{r}
-ZD <- read.csv2("../ZD.csv")
+ZD <- read.csv2("../data/ZD.csv")
 #To check if it read in correctly:
 head(ZD[1])
 ```
@@ -68,47 +67,6 @@ plot(Freq ~ ZD, data = example1, type = "h", main = "Data example 1")
 plot(Freq ~ ZD, data = example2, type = "h", main = "Data example 2")
 
 plot(Freq ~ ZD, data = example3, type = "h", main = "Data example 3")
-```
-
-## Distribution Functions
-
-Let's start with a few complementary functions:
-In case we want to test our functions we use testdata. In our case we build our own functions to so, namely: \textbf{rt.mixture, dt.mixture, pt.mixture and qt.mixture}.
-
-\textbf{rt.mixture} simulates N observations from a mixture of t distributions. It gives a numeric vector of length N.
-
-```{r}
-pi=c(0.6, 0.4)
-mu=c(10, 30)
-s=c(4, 7)
-df=c(4, 300)
-```
-
-The parameters $\pi, \mu, \sigma, \nu$ (here "df") do not have to be a single numeric value. They can also be vectors of the same length. 
-Their values must be \textit{positive} and the sum of the values of pi has to be equal to 1!
-There are no default-values for these parameters!
-
-```{r}
-test <- rt.mixture(N=1000, pi = pi, mu = mu, s = s, df = df, round=TRUE)
-summary(test)
-```
-
-\textbf{dt.mixture} gives the PDF of a mixture of t distributions. The parameter $y$ must be a numeric vector at which the PDF shall be evaluated.
-
-```{r}
-test2 <- dt.mixture(test, pi, mu, s, df)
-```
-
-\textbf{pt.mixture} gives the CDF of a mixture of t distributions. Similiar to \textbf{dt.mixture} the parameter $y$ is a numeric vector at which the CDF shall be evaluated.
-
-```{r}
-test3 <- pt.mixture(test, pi, mu, s, df)
-```
-
-Lastly \textbf{qt.mixture} is the quantile function of a mixture of t distributions. The parameter $p$ is the value at which the quantile function shall be evaluated. It must be a numeric scalar within $(0, 1)$. $tol$ is the numerical tolerance of the result. It also must be a small, positive, numeric scalar. In contrast to the other parameters it does have a default value.
-
-```{r}
-qt.mixture(0.8, pi, mu, s, df)
 ```
 
 ## Main functions for analysis
@@ -147,7 +105,7 @@ n1 <- as.integer(ZDs1[4:48])
 
 After defining 'n' and 'j', we now have to find out the best number for the components.
 
-```{r}
+```
 #With one component:
 (result1 = total.function(n1, j, K=1, atoms=6, memb.exp=2, draw=TRUE))
 #Two components:
@@ -157,6 +115,7 @@ After defining 'n' and 'j', we now have to find out the best number for the comp
 ```
 
 The last step is the model selection process:
+
 ```
 #model selection (up to Kmax=5)
 (selected1 <- model.select.t.mixture(n1, j, Kmax=5, memb.exp=2, atoms=6))
@@ -183,6 +142,7 @@ n2 = as.integer(ZDs2[4:48])
 ```
 
 On to example 3.
+
 ```
 n3 = as.integer(ZDs3[4:48])
 

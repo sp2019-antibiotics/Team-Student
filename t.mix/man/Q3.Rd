@@ -11,9 +11,9 @@ Q3(s, a, b)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{s}{a}
-  \item{a}{a}
-  \item{b}{a}
+  \item{s}{Logarithm of standard deviation}
+  \item{a}{Parameters of invers Gamma distribution}
+  \item{b}{Parameters of invers Gamma distribution}
 }
 
 \author{
