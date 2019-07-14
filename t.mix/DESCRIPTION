@@ -1,0 +1,22 @@
+Package: t.mix
+Type: Package
+Title: T-Mixture
+Version: 0.0-1
+Authors@R: as.person(c(
+    "Lisa Allmesberger <lisa.allmesberger@gmx.de> [aut]", 
+    "Fabian Bergs <fabianbergs@gmail.com> [aut]",
+    "Stefan Immler <immler.stefan@gmx.at> [aut]",
+    "Michael Kässmann <m.kaessmann@gmail.com> [aut]", 
+     "Bettina Grün <bettina.gruen@jku.at> [aut, cre]"
+  ))
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+Depends: R (>= 3.5.0)
+License: GPL (>= 2)
+Imports: invgamma, cluster, VGAM
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Suggests: 
+    knitr, rmarkdown, testthat, matrixStats
+VignetteBuilder: knitr
