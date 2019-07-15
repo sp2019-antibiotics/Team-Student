@@ -1,7 +1,0 @@
-exportPattern("^[[:alpha:]]+")
-importFrom("graphics", "abline", "axis", "hist", "legend", "lines",
-             "plot", "points")
-importFrom("stats", "density", "dt", "pt", "qt", "rt")
-importFrom("utils", "tail")
-importFrom("stats", "optim")
-importFrom("invgamma", "dinvgamma")
