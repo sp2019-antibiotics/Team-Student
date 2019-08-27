@@ -1246,7 +1246,7 @@ qt.mixture_log <- function(p, pi, mu, s, df, tol=100*.Machine$double.eps)
 #Input:
 #x: data (numeric vector of length N)
 #w: weights (numeric vector of length N, entries non-negative)
-#z: which quantile(-s) shall be computed (numeric vector, entries within (0, 1))
+#probs: which quantile(-s) shall be computed (numeric vector, entries within (0, 1))
 
 #Output:
 #q: weighted sample quantile(-s)
@@ -1262,7 +1262,7 @@ weighted.quantile <- function(x, w=rep(1/length(x), times=length(x)), probs=0.5)
 
   stopifnot(all(w>=0))
   stopifnot(any(w>0))
-  stopifnot(all(0 < z & z < 1))
+  stopifnot(all(0 < probs & probs < 1))
 
   #prepare arguments
   w = w/sum(w)
@@ -1271,8 +1271,8 @@ weighted.quantile <- function(x, w=rep(1/length(x), times=length(x)), probs=0.5)
   x = x[order]
   w = w[order]
 
-  p = length(z)
-  z = sort(z)
+  p = length(probs)
+  probs = sort(probs)
 
   #prepare loop variables
   q = numeric(p)
@@ -1281,7 +1281,7 @@ weighted.quantile <- function(x, w=rep(1/length(x), times=length(x)), probs=0.5)
   #calculate quantile
   for(j in 1:p)
   {
-    while(W_sum < z[j])
+    while(W_sum < probs[j])
     {
       i = i+1
       W_sum = W_sum + w[i]
