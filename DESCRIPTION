@@ -14,8 +14,8 @@ Description: Fits a mixture of t-distributions to
             algorithm using a penalized likelihood approach.
 Depends: R (>= 3.5.0)
 License: GPL (>= 2)
-Imports: invgamma, cluster, VGAM
+Imports: invgamma, cluster, matrixStats, VGAM
 Encoding: UTF-8
 Suggests: 
-    EUCASTData, knitr, rmarkdown, testthat, matrixStats
+    EUCASTData, knitr, rmarkdown
 VignetteBuilder: knitr

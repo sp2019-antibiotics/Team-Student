@@ -1,21 +1,3 @@
-#install/load packages
-#install.packages("RSKC")
-#install.packages("zipfR")
-#install.packages("tclust")
-#install.packages("ppclust")
-
-#install.packages("metRology")
-#install.packages("LaplacesDemon")
-#install.packages("rethinking")
-#install.packages("matrixStats")
-#install.packages("actuar")
-
-#Packages:
-#library(cluster)
-#library(invgamma)
-#library(VGAM)
-#library(matrixStats)
-
 ######################################
 ######################################
 ### 'Main' functions for analysis

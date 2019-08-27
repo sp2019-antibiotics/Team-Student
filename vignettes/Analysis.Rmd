@@ -24,13 +24,6 @@ knitr::opts_chunk$set(
 This package is part of a project to determine the best way to evaluate data with rounded values (binned data).  Our task was to use an EM algorithm with penalty for mixtures of t-distributions.
 
 This vignette has the goal to explain all important functions contained in this package and their usage as well as the visualization with examples.
-```{r, include=FALSE}
-library(invgamma)
-library(VGAM)
-library(matrixStats)
-```
-
-
 ```{r setup}
 library(t.mix)
 ```
@@ -59,7 +52,7 @@ example3 <- data.frame(ZD = as.integer(gsub("^Z", "", colnames(ZDs3))),
                       Freq = unname(unlist(ZDs3)))
 ```
 
-The following plots ought to give an insight to the example-data (45 obsvervations of rounded values and their respective frequencies) used here.
+The following plots ought to give an insight to the example-data (45 observations of rounded values and their respective frequencies) used here.
 
 ```{r}
 plot(Freq ~ ZD, data = example1, type = "h", main = "Data example 1")
