@@ -2,22 +2,20 @@ Package: t.mix
 Type: Package
 Title: T-Mixture
 Version: 0.0-1
-Authors@R: as.person(c(
-    "Lisa Allmesberger <lisa.allmesberger@gmx.de> [aut]", 
-    "Fabian Bergs <fabianbergs@gmail.com> [aut]",
-    "Stefan Immler <immler.stefan@gmx.at> [aut]",
-    "Michael Kässmann <m.kaessmann@gmail.com> [aut]", 
-     "Bettina Grün <bettina.gruen@jku.at> [aut, cre]"
-  ))
-Description: This package is part of a project to determine the best way to evaluate
-            data with rounded values (binned data).  Our task was to use an EM 
-            algorithm with penalty for mixtures of t-distributions.
+Authors@R: c(
+    person("Lisa", "Allmesberger", role = "aut", email = "lisa.allmesberger@gmx.de"),
+    person("Fabian", "Bergs", role = "aut", email = "fabianbergs@gmail.com"),
+    person("Stefan", "Immler", role = "aut", email = "immler.stefan@gmx.at"),
+    person("Michael", "Kässmann", role = "aut", email = "m.kaessmann@gmail.com"),
+    person("Bettina", "Grün", role = c("aut", "cre"), email = "bettina.gruen@jku.at")
+  )
+Description: Fits a mixture of t-distributions to 
+            data with rounded values (binned data) with an EM 
+            algorithm using a penalized likelihood approach.
 Depends: R (>= 3.5.0)
 License: GPL (>= 2)
 Imports: invgamma, cluster, VGAM
 Encoding: UTF-8
-LazyData: true
-RoxygenNote: 6.1.1
 Suggests: 
-    knitr, rmarkdown, testthat, matrixStats
+    EUCASTData, knitr, rmarkdown, testthat, matrixStats
 VignetteBuilder: knitr

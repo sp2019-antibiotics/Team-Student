@@ -37,7 +37,7 @@ library(t.mix)
 ## Data
 
 ```{r}
-ZD <- read.csv2("../data/ZD.csv")
+data("ZD", package = "EUCASTData")
 #To check if it read in correctly:
 head(ZD[1])
 ```
