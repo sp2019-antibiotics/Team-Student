@@ -1,17 +1,18 @@
-\name{AIC.t.mixture}
-\alias{AIC.t.mixture}
+\name{logLik.t.mixture.old}
+\alias{logLik.t.mixture.old}
 \title{
-Calculate the AIC
+Log link function from a t-mixture distribution
 }
 \description{
-Calculate the AIC
+Log link function from a t-mixture distribution
 }
 \usage{
-AIC.t.mixture(n, j, pi, mu, s, df)
+logLik.t.mixture.old(n, j, pi, mu, s, df)
 }
+
 \arguments{
-   \item{n}{Frequencies (integer vector of length J; non-negative entries)}
- \item{j}{Possible values (numeric vector of length J > 0)}
+  \item{n}{Frequencies (integer vector of length J; non-negative entries)}
+  \item{j}{Possible values (numeric vector of length J > 0)}
   \item{pi}{Mixture proportions (numeric vector of length K > 0; sum(pi)=1, entries non-negativ!)}
   \item{mu}{Component medians (numeric vector of length K)}
   \item{s}{Component sigma's (numeric vector of length K; entries positive!)}
@@ -24,10 +25,6 @@ Fabian Bergs
 Stefan Immler
 Michael Kässmann
 }
-
-
-
-
 \note{
 %%  ~~further notes~~
 }

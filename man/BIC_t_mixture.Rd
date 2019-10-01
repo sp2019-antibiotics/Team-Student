@@ -1,5 +1,6 @@
-\name{BIC_t_mixture}
-\alias{BIC_t_mixture}
+\name{BIC.t.mixture}
+\alias{BIC.t.mixture}
+%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Calculate the BIC
 }
@@ -7,7 +8,7 @@ Calculate the BIC
 Calculate the BIC
 }
 \usage{
-BIC_t_mixture(n, j, pi, mu, s, df)
+BIC.t.mixture(n, j, pi, mu, s, df)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -25,3 +26,27 @@ Fabian Bergs
 Stefan Immler
 Michael Kässmann
 }
+
+
+
+
+\note{
+%%  ~~further notes~~
+}
+
+%% ~Make other sections like Warning with \section{Warning }{....} ~
+
+\seealso{
+%% ~~objects to See Also as \code{\link{help}}, ~~~
+}
+\examples{
+##---- Should be DIRECTLY executable !! ----
+##-- ==>  Define data, use random,
+##--	or do  help(data=index)  for the standard data sets.
+
+## The function is currently defined as
+function (x)
+{
+  }
+}
+

@@ -1,17 +1,24 @@
-\name{Q4}
-\alias{Q4}
+\name{weighted.quantile}
+\alias{weighted.quantile}
+
 \title{
-Quantile4
+Weighted quantile
 }
 \description{
-Quantile 4
+Computes weighted quantile
 }
 \usage{
-Q4(df)
+weighted.quantile(x, w=rep(1/length(x), times=length(x)), probs=0.5)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
-  \item{df}{Degrees of freedom}
+  \item{x}{Data (numeric vector of length N)}
+  \item{w}{Weights (numeric vector of length N, entries non-negative)}
+  \item{probs}{Which quantile(-s) shall be computed (numeric vector, entries within (0, 1))}
+}
+
+\value{
+\item{q}{Weighted sample quantile(-s)}
 }
 
 \author{
@@ -21,6 +28,7 @@ Stefan Immler
 Michael Kässmann
 }
 
+\keyword{Weighted quantile}
 
 
 
@@ -41,9 +49,8 @@ Michael Kässmann
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-function (df)
+function (x)
 {
-    return(ifelse(exp(df) <= 10^12, 0, -Inf))
   }
 }
 

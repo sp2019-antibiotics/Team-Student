@@ -1,17 +1,24 @@
-\name{Q4}
-\alias{Q4}
+\name{ungroup.data}
+\alias{ungroup.data}
 \title{
-Quantile4
+Ungroup data
 }
+
 \description{
-Quantile 4
+A function that ungroups data (if N>700, the resulting vector is not the actual sample, but a close representation of it with length 500)
 }
+
 \usage{
-Q4(df)
+ungroup.data(n, j)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
-  \item{df}{Degrees of freedom}
+  \item{n}{possible values (numeric vector of length J > 0)}
+  \item{j}{frequencies (integer vector of length J; non-negative entries)}
+}
+
+\value{
+\item{y}{ungrouped data vector (length: min(500, N))}
 }
 
 \author{
@@ -41,9 +48,8 @@ Michael Kässmann
 ##--	or do  help(data=index)  for the standard data sets.
 
 ## The function is currently defined as
-function (df)
+function (x)
 {
-    return(ifelse(exp(df) <= 10^12, 0, -Inf))
   }
 }
 

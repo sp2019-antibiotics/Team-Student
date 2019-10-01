@@ -1,5 +1,5 @@
-\name{logLik_t_mixture}
-\alias{logLik_t_mixture}
+\name{logLik.t.mixture}
+\alias{logLik.t.mixture}
 \title{
 Log link function from a t-mixture distribution
 }
@@ -7,7 +7,7 @@ Log link function from a t-mixture distribution
 Log link function from a t-mixture distribution
 }
 \usage{
-logLik_t_mixture(n, j, pi, mu, s, df)
+logLik.t.mixture(n, j, pi, mu, s, df)
 }
 
 \arguments{
@@ -26,4 +26,27 @@ Stefan Immler
 Michael Kässmann
 }
 
+
+
+
+
+\note{
+%%  ~~further notes~~
+}
+
+%% ~Make other sections like Warning with \section{Warning }{....} ~
+
+\seealso{
+%% ~~objects to See Also as \code{\link{help}}, ~~~
+}
+\examples{
+##---- Should be DIRECTLY executable !! ----
+##-- ==>  Define data, use random,
+##--	or do  help(data=index)  for the standard data sets.
+
+## The function is currently defined as
+function (x)
+{
+  }
+}
 
