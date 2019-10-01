@@ -18,5 +18,5 @@ Imports: invgamma, cluster, VGAM, matrixStats
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
-Suggests: knitr, rmarkdown
+Suggests: EUCASTData, knitr, rmarkdown
 VignetteBuilder: knitr
