@@ -1,1 +1,6 @@
 exportPattern("^[[:alpha:]]+")
+importFrom("graphics", "abline", "axis", "legend", "lines", "plot",
+           "points")
+importFrom("stats", "density", "dt", "optim", "pt", "qt", "rt")
+importFrom("utils", "tail")
+
