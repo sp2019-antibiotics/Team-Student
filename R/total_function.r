@@ -133,7 +133,7 @@ total.function<-function(n, j, K, atoms=NULL, draw=FALSE, Ecoff.quantile=0.01, p
   #define beta
   if(is.null(beta))
   {
-    beta = (1+alpha)*0.36*(weighted.quantile(x=j, w=n, p=0.9) - weighted.quantile(x=j, w=n, p=0.1))/K
+    beta = (1+alpha)*0.36*(weighted.quantile(x=j, w=n, probs=0.9) - weighted.quantile(x=j, w=n, probs=0.1))/K
   }
   else
   {
