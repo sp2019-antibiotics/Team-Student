@@ -18,8 +18,6 @@
 #Used package(-s):
 #cluster
 
-library(cluster)
-
 Initialization.t.mixture<-function(n, j, K, memb.exp=2, draw=FALSE)
 {
   #check arguments

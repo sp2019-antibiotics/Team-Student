@@ -1,4 +1,5 @@
-exportPattern("^[[:alpha:]]+")
+export("total.function", "model.select.t.mixture")
+
 importFrom("graphics", "abline", "axis", "legend", "lines", "plot",
            "points")
 importFrom("stats", "density", "dt", "optim", "pt", "qt", "rt")

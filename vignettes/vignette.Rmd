@@ -24,10 +24,6 @@ This vignette has the goal to explain all important functions contained in this 
 
 
 ```{r, include=F}
-library(invgamma)
-library(cluster)
-library(VGAM)
-library(matrixStats)
 library(t.mix)
 ```
 

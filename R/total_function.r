@@ -33,9 +33,6 @@
 #cluster
 
 #needs to revised yet (maybe also its description)
-library(invgamma)
-library(cluster)
-
 total.function<-function(n, j, K, atoms=NULL, draw=FALSE, Ecoff.quantile=0.01, pi_cutoff=0.2, alpha=0.05, beta=NULL, memb.exp=2, maxiter=1000, eps=10^-3, optim.method=c("Nelder-Mead", "BFGS"))
 {
   #check arguments
