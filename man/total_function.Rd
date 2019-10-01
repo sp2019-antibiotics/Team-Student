@@ -36,26 +36,13 @@ Michael Kässmann
 
 \keyword{total funcion}
 
-
-
-
-
-
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
-library(invgamma)
-data(ZD)
-ZDs1 <- subset(ZD, Antimicrobial == "Ampicillin" & Bacterium == "Escherichia coli")
-j = 6:50
-n1 = as.integer(ZDs1[4:48])
-total.function(n1, j, K=1, atoms=6, memb.exp=2, draw=TRUE)
+if (requireNamespace("EUCASTData")){
+  data("ZD", package = "EUCASTData")
+  ZDs1 <- subset(ZD, Antimicrobial == "Ampicillin" & Bacterium == "Escherichia coli")
+  j = 6:50
+  n1 = as.integer(ZDs1[4:48])
+  total.function(n1, j, K=1, atoms=6, memb.exp=2, draw=TRUE)
+}
 }
 

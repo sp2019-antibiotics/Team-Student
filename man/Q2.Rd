@@ -25,32 +25,3 @@ Michael Kässmann
 }
 
 
-
-
-
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
-\examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (par, tau, j, n)
-{
-    upper_log = pt((j + 1/2 - par[1])/exp(par[2]), exp(par[3]),
-        log.p = TRUE)
-    lower_log = pt((j - 1/2 - par[1])/exp(par[2]), exp(par[3]),
-        log.p = TRUE)
-    return(sum((upper_log + VGAM::log1mexp(upper_log - lower_log)) *
-        tau * n))
-  }
-}
-
