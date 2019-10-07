@@ -16,7 +16,7 @@ Initialization.t.mixture(n, j, K, memb.exp=2, draw=FALSE)
 }
 \item{K}{Number of components (numeric scalar)
 }
-\item{memb.exp}{Clustering parameter (numeric scalar)
+\item{memb.exp}{Clustering parameter (numeric scalar > 1)
 }
 \item{draw}{Should clustering be drawn? (Boolean scalar)
 }
@@ -34,5 +34,9 @@ Michael Kässmann
 }
 
 \keyword{initialization}
+
+
+
+
 
 

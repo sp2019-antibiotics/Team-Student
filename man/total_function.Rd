@@ -6,10 +6,10 @@ Total Function
 \description{
 The main function for the analysis
 }
-%usage too large
-%\usage{
-%total.function(n, j, K, atoms=NULL, draw=FALSE, Ecoff.quantile=0.01, pi_cutoff=0%.2, alpha=0.05, beta=NULL, memb.exp=2, maxiter=1000, eps=10^-3, optim.method=c%("Nelder-Mead", "BFGS"))
-%}
+
+\usage{
+total.function(n, j, K, atoms=NULL, draw=FALSE, Ecoff.quantile=0.01, pi_cutoff=0.2, alpha=0.05, beta=NULL, memb.exp=2, maxiter=1000, eps=10^-3, optim.method=c("Nelder-Mead", "BFGS"))
+}
 \arguments{
  \item{n}{Frequencies (integer vector of length J; non-negative entries)}
  \item{j}{Possible values (numeric vector of length J > 0)}
@@ -33,16 +33,17 @@ Stefan Immler
 Michael Kässmann
 }
 
+\value{
+An object of class `\code{list}' with elements:
+  \item{parameters}{Kx4 matrix containing the calculated parameters.}
+  \item{ECOFF}{1x2 matrix containing the group index and ECOFF.}
+  \item{AIC}{AIC value.}
+  \item{BIC}{BIC value.}
+  \item{log_likelihood}{1xM matrix containing the log likelihood value for each EM iteration. (M number of EM iterations)}
+  \item{EM_iterations}{Number of EM iterations.}
+}
 
 \keyword{total funcion}
 
-\examples{
-if (requireNamespace("EUCASTData")){
-  data("ZD", package = "EUCASTData")
-  ZDs1 <- subset(ZD, Antimicrobial == "Ampicillin" & Bacterium == "Escherichia coli")
-  j = 6:50
-  n1 = as.integer(ZDs1[4:48])
-  total.function(n1, j, K=1, atoms=6, memb.exp=2, draw=TRUE)
-}
-}
+
 

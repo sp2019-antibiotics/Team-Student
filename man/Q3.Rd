@@ -9,7 +9,7 @@ Quantile 3
 \usage{
 Q3(s, a, b)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{s}{Logarithm of standard deviation}
   \item{a}{Parameters of invers Gamma distribution}
@@ -22,6 +22,7 @@ Fabian Bergs
 Stefan Immler
 Michael Kässmann
 }
+
 
 
 

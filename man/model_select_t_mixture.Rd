@@ -4,7 +4,7 @@
 \title{
 Select model of a t-mixture distribution}
 \description{
-Selecting a model
+Computes AIC or BIC for each model (K = 1,...,Kmax). Selects the best model and provides an analysis.
 }
 \arguments{
   \item{n}{Frequencies (integer vector of length J; non-negative entries)}
@@ -29,5 +29,17 @@ Stefan Immler
 Michael Kässmann
 }
 
+\value{
+An object of class `\code{list}' with elements:
+  \item{parameters}{Kx4 matrix containing the calculated parameters.}
+  \item{ECOFF}{1x2 matrix containing the group index and ECOFF.}
+  \item{AIC}{AIC value.}
+  \item{BIC}{BIC value.}
+  \item{log_likelihood}{1xM matrix containing the log likelihood value for each EM iteration. (M number of EM iterations)}
+  \item{EM_iterations}{Number of EM iterations.}
+}
 
 
+\seealso{
+total.function
+}

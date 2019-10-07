@@ -9,7 +9,7 @@ Quantile Max
 \usage{
 Qmax(par, tau, j, n, a, b)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{par}{Matrix of parameters (nmeric 4xK - matrix); may also be delivered separately.}
   \item{tau}{A value.}
@@ -25,4 +25,5 @@ Fabian Bergs
 Stefan Immler
 Michael Kässmann
 }
+
 

@@ -6,10 +6,10 @@ EM algorithm for t-mixture
 \description{
 EM algorithm for t-mixture
 }
-%usage too large
-%\usage{
-%EM.algorithm.t.mixture(n,j,tau_hat,alpha,beta,maxiter=1000,optim.method=c("Nelder%-Mead","BFGS"),eps=10^-3)
-%}
+
+\usage{
+EM.algorithm.t.mixture(n,j,tau_hat,alpha,beta,maxiter=1000,optim.method=c("Nelder-Mead","BFGS"),eps=10^-3)
+}
 \arguments{
 \item{n}{Frequencies (integer vector of length J)
 }

@@ -1,6 +1,6 @@
 \name{BIC.t.mixture}
 \alias{BIC.t.mixture}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
 Calculate the BIC
 }

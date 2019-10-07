@@ -30,8 +30,10 @@ Stefan Immler
 Michael Kässmann
 }
 
+
 \seealso{
 dt.mixture, qt.mixture, rt.mixture
 }
+
 
 

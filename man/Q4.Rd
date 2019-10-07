@@ -9,7 +9,7 @@ Quantile 4
 \usage{
 Q4(df)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{df}{Degrees of freedom}
 }
@@ -20,8 +20,6 @@ Fabian Bergs
 Stefan Immler
 Michael Kässmann
 }
-
-
 
 
 
