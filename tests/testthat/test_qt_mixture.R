@@ -1,0 +1,32 @@
+context("Input and output of qt.mixture()")
+library("t.mix")
+
+test_that("Inputs are correctly checked", {
+  expect_error(qt.mixture())
+  expect_error(qt.mixture(NULL))
+  expect_error(qt.mixture("a"))
+  expect_error(qt.mixture(matrix()))
+  expect_error(qt.mixture(120))
+  expect_error(qt.mixture(0.5, NULL))
+  expect_error(qt.mixture(0.5, "a"))
+  expect_error(qt.mixture(0.5, c(-1,0,0)))
+  expect_error(qt.mixture(0.5, c(0.4,0.1,0.5), NULL))
+  expect_error(qt.mixture(0.5, c(0.4,0.1,0.5), "a"))
+  expect_error(qt.mixture(0.5, c(0.4,0.1,0.5), c(1)))
+  expect_error(qt.mixture(0.5, c(0.4,0.1,0.5), c(2,3,4), NULL))
+  expect_error(qt.mixture(0.5, c(0.4,0.1,0.5), c(2,3,4), "a"))
+  expect_error(qt.mixture(0.5, c(0.4,0.1,0.5), c(2,3,4), c(-1,-1,-1)))
+  expect_error(qt.mixture(0.5, c(0.4,0.1,0.5), c(2,3,4), c(1)))
+  expect_error(qt.mixture(0.5, c(0.4,0.1,0.5), c(2,3,4), c(2,2,2), NULL))
+  expect_error(qt.mixture(0.5, c(0.4,0.1,0.5), c(2,3,4), c(2,2,2), "a"))
+  expect_error(qt.mixture(0.5, c(0.4,0.1,0.5), c(2,3,4), c(2,2,2), c(1)))
+  expect_error(qt.mixture(0.5, c(0.4,0.1,0.5), c(2,3,4), c(2,2,2), c(-1,-1,-1)))
+  expect_error(qt.mixture(0.5, c(0.4,0.1,0.5), c(2,3,4), c(2,2,2), c(-1,-1,-1), NULL))
+  expect_error(qt.mixture(0.5, c(0.4,0.1,0.5), c(2,3,4), c(2,2,2), c(-1,-1,-1), "a"))
+  expect_error(qt.mixture(0.5, c(0.4,0.1,0.5), c(2,3,4), c(2,2,2), c(-1,-1,-1), -10))
+})
+
+test_that("Output has correct format", {
+  expect_true(is.numeric(qt.mixture(0.5, c(0.4,0.1,0.5), c(2,3,4), c(2,2,2), c(10,10,10))))
+})
+
