@@ -46,6 +46,7 @@ total.function<-function(n, j, K, atoms=NULL, draw=FALSE, Ecoff.quantile=0.01, p
 
   stopifnot(is.numeric(j))
   stopifnot(is.vector(j))
+  stopifnot(all(atoms %in% j))
   stopifnot(length(j) == length(n))
 
   j = j[n>0]

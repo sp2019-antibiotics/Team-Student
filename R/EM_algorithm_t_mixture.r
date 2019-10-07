@@ -3,7 +3,6 @@
 #Input:
 #j: possible values (numeric vector of length J)
 #n: frequencies (integer vector of length J)
-#K: number of components (numeric scalar)
 #tau_hat: estimated component memberhsips from Initialization (numeric JxK - Matrix)
 #alpha, beta: Hyperparameters for MAP estimation (numeric scalar)
 #maxiter: maximum number of iterations (integer scalar)

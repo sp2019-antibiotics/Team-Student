@@ -19,6 +19,7 @@ rt.mixture<-function(N, pi, mu, s, df, round=FALSE)
   stopifnot(is.numeric(N))
   stopifnot(length(N)==1)
   N <- as.integer(N)
+  K = length(pi)
   stopifnot(K>=1)
 
   stopifnot(is.numeric(pi))

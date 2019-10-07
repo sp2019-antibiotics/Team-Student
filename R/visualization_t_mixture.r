@@ -1,25 +1,3 @@
-####################### visualization.t.mixture(): ###########################################
-
-#Visualizes results of analysis
-
-#Input:
-#y: data (numeric vector)
-#pi: mixture proportions (numeric vector of length K > 0; sum(pi) = 1, entries non-negative)
-#mu: component medians (numeric vector of lentgh K)
-#s: component sigma's (numeric vector of lentgh K; entries positive)
-#df: component degrees of freedom (numeric vector of lentgh K; entries positive)
-#ECOFF: Should ECOFF be plotted as well? (booelan scalar)
-
-#Output: None (only plots)
-
-#Uses:
-#dt.mixture()
-#ECOFF.t.mixture()
-
-#hist() may not work well yet
-#grouped data instead of y
-#arguments are to be checked
-
 visualization.t.mixture <- function(n, j, pi, mu, s, df, ecoff=NULL, kernel.density=TRUE, hist=TRUE, new.plot=hist, pi_resistant=0)
 {
   #check arguments

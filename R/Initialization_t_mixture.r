@@ -6,7 +6,7 @@
 #j: possible values (numeric vector of length J)
 #n: frequencies (integer vector of length J)
 #K: number of components (numeric scalar)
-#memb.exp: clustering parameter (numeric scalar)
+#memb.exp: clustering parameter (numeric scalar > 1)
 #draw: Should clustering be drawn? (Boolean scalar):
 
 #Output:
