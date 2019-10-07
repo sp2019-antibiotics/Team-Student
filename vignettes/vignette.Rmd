@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-This package is part of a project to determine the best way to evaluate data with rounded values (binned data).  Our task was to use an EM algorithm with penalty for mixtures of t-distributions.
+This package is part of a project to determine the best way to evaluate data with rounded values (binned data). Our task was to use an EM algorithm with penalty for mixtures of t-distributions.
 
 This vignette has the goal to explain all important functions contained in this package and their usage as well as the visualization with examples.
 
@@ -34,8 +34,7 @@ library(t.mix)
 data("ZD", package = "EUCASTData")
 ```
 
-
-First we establish three example data sets, which will be used throughout this vignette. These datasets are subsets of our original data.
+First we establish three example data sets, which will be used throughout this vignette. These datasets are subsets of our original data. All three datasets are focused on the bacteria species Escherichia. They are distinguishable by their antibiotic, which are "Ampicillin", "Piperacillin" and "Mecillinam" respectively. 
 
 ```{r}
 #extract subsets
@@ -70,6 +69,8 @@ To get an idea of how our functions work, we provided an overview of our algorit
 
 The two main functions to analyse the data are \textbf{total.function} and \textbf{model.select.t.mixture}. Most of the other functions included in this package do the preliminary work or are used in either one or the other or both of the main functions.
 
+The following diagrams include a histogram of the data (grey bars), a kernel density estimation (red line) and the fitted t-mixture density (blue line). Please note, that the fitted t-mixture density only captures non-resistant observations. Furthermore, the estimated ECOFF is drawn as a vertical black dashed line.
+
 We will now proceed with evaluating the first example dataset.
 
 ```{r}
@@ -97,7 +98,10 @@ The last step is the model selection process:
 (selected1 <- model.select.t.mixture(n1, j, Kmax=5, memb.exp=2, atoms=6))
 ```
 
+With an ECOFF of 13.305 our analysis shows, that a K = 2 is the best fit for the model in the first example.
+
 This process is repeated for the second example dataset :
+We remember, that example dataset number 2 contains the observations with the antibiotic "Piperacillin".
 
 ```{r}
 ####### Second data set ##########
@@ -120,6 +124,14 @@ n2 = as.integer(ZDs2[4:48])
 (selected2 <- model.select.t.mixture(n2, j, Kmax=5, memb.exp=2, atoms=6))
 ```
 
+The histograms show a bimodal distribution, apart from the spike at 6 caused by the resistant type. It also shows that using only one component is not suitable, which already becomes obvious by checking the value for the ECOFF estimate, which is about -6.
+
+After analysing the different versions we can conclude that K = 2 (number of non-resistant components) gives the best results. The estimated ECOFF of 19.8 almost matches the official one of 20, whereas with K = 3 the ECOFF-value is about 21.
+
+On to the third example dataset:
+This dataset contains the observations with the antibiotic "Mecillinam".
+
+
 On to the third example dataset:
 
 ```{r}
@@ -141,8 +153,13 @@ n3 = as.integer(ZDs3[4:48])
 (result3 = total.function(n3, j, K=4, atoms=6, memb.exp=2, draw=TRUE))
 ```
 
+To be on the safe, this time we ran 4 models ranging from K = 1 to K = 4. All that is left is to find the model with the best fit.
+The histogram does not adequately show that there is a slight elevation right before the main one. This makes it more difficult to find the best fit.
+
 ```{r}
 #model selection (up to Kmax=5)
 (selected3 <- model.select.t.mixture(n3, j, Kmax=5, memb.exp=2, atoms=6, optim.method="Nelder-Mead"))
 
 ```
+
+This time the \textbf{model.select.t.mixture}-function shows that the model with K = 3 has the best results, indicated by the AIC and BIC. 
