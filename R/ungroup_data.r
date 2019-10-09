@@ -24,15 +24,7 @@ ungroup.data <- function(n, j)
   }
   else #ungroup data
   {
-    y = numeric(N)
-    a = 1
-    b = 0
-    for(k in 1:J)
-    {
-      b = b + n[k]
-      y[a:b] = j[k]
-      a = b+1
-    }
+    y = rep(j, n)
   }
   return(y)
 }
