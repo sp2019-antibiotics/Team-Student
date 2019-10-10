@@ -19,8 +19,6 @@ ungroup.data <- function(n, j)
   if(N > 500) #take representative observations
   {
     y = weighted.quantile(j, n, probs=(1:499)/500)
-    n_sample = table(y)
-    j_sample = as.numeric(names(n_sample))
   }
   else #ungroup data
   {
